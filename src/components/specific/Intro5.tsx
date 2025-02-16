@@ -63,8 +63,7 @@ export default function Intro5() {
                     {project.des.slice(0, 120)}...
                   </p>
                   <div className="flex flex-wrap gap-2 mt-3">
-                    {/* @ts-ignore */}
-                    {project.stack.map((tech, idx) => (
+                    {project.stack.map((tech: any, idx: any) => (
                       <span
                         key={idx}
                         className="text-xs font-medium bg-stone-800 text-white px-2 py-1 rounded"
