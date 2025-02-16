@@ -7,11 +7,11 @@ export default function Intro5() {
   const [activeTab, setActiveTab] = useState(Object.keys(projectsData)[0]);
 
   const colors = [
-    "bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-indigo-900",
-    "bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-red-500",
-    "bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-fuchsia-900",
-    "bg-gradient-to-r hover:from-stone-400 hover:via-stone-800 hover:to-green-500",
-    "bg-gradient-to-r hover:from-stone-400 hover:via-stone-500 hover:to-pink-500",
+    "hover:bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-indigo-900",
+    "hover:bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-red-500",
+    "hover:bg-gradient-to-r hover:from-stone-900 hover:via-stone-800 hover:to-fuchsia-900",
+    "hover:bg-gradient-to-r hover:from-stone-400 hover:via-stone-800 hover:to-green-500",
+    "hover:bg-gradient-to-r hover:from-stone-400 hover:via-stone-500 hover:to-pink-500",
   ];
 
   return (
@@ -44,7 +44,7 @@ export default function Intro5() {
             (project: any, index: any) => (
               <motion.div
                 key={index}
-                className={`bg-stone-900 p-6 rounded-lg shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 items-center hover:${
+                className={`bg-stone-900 p-6 rounded-lg shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 items-center ${
                   colors[index % colors.length]
                 }`}
                 whileHover={{ scale: 1.02 }}
