@@ -40,60 +40,61 @@ export default function Intro5() {
         transition={{ duration: 0.5 }}
       >
         <div className="flex flex-col gap-3 mt-4">
-          {/* @ts-ignore */}
-          {projectsData[activeTab].map((project, index) => (
-            <motion.div
-              key={index}
-              className={`bg-stone-900 p-6 rounded-lg shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 items-center hover:${
-                colors[index % colors.length]
-              }`}
-              whileHover={{ scale: 1.02 }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <img
-                src={project.image[0]}
-                alt={project.name}
-                className="w-48 h-32 object-cover rounded-md"
-              />
-              <div className="flex-1">
-                <h3 className="text-2xl font-semibold">{project.name}</h3>
-                <p className="text-gray-400 mt-2">
-                  {project.des.slice(0, 120)}...
-                </p>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {/* @ts-ignore */}
-                  {project.stack.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs font-medium bg-stone-800 text-white px-2 py-1 rounded"
+          {projectsData[activeTab as keyof typeof projectsData]?.map(
+            (project: any, index: any) => (
+              <motion.div
+                key={index}
+                className={`bg-stone-900 p-6 rounded-lg shadow-lg transition-shadow duration-300 flex flex-row items-start gap-4 items-center hover:${
+                  colors[index % colors.length]
+                }`}
+                whileHover={{ scale: 1.02 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <img
+                  src={project.image[0]}
+                  alt={project.name}
+                  className="w-48 h-32 object-cover rounded-md"
+                />
+                <div className="flex-1">
+                  <h3 className="text-2xl font-semibold">{project.name}</h3>
+                  <p className="text-gray-400 mt-2">
+                    {project.des.slice(0, 120)}...
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {/* @ts-ignore */}
+                    {project.stack.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="text-xs font-medium bg-stone-800 text-white px-2 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex justify-start items-center gap-4 mt-4">
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline"
                     >
-                      {tech}
-                    </span>
-                  ))}
+                      Live Demo
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:underline"
+                    >
+                      GitHub
+                    </a>
+                  </div>
                 </div>
-                <div className="flex justify-start items-center gap-4 mt-4">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            )
+          )}
         </div>
       </motion.div>
     </div>
