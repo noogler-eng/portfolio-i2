@@ -1,0 +1,123 @@
+{
+  "frontend": [
+    {
+      "name": "Infobip",
+      "des": "pure forntend page with details are display in form of tabs and using different optmized components",
+      "stack": ["react", "ts", "lucid-react", "vercel", "tailwindcss"],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.53.48%E2%80%AFPM.png?updatedAt=1739709004358"
+      ],
+      "live": "https://infobip.vercel.app",
+      "github": "https://github.com/noogler-eng/infobip"
+    },
+    {
+      "name": "saas landing-page",
+      "des": "this is basic landing page which has unique animations and compoennts",
+      "stack": [
+        "react",
+        "ts",
+        "lucid-react",
+        "framer-motion",
+        "vercel",
+        "tailwindcss"
+      ],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.53.06%E2%80%AFPM.png?updatedAt=1739708921125"
+      ],
+      "live": "https://saas-landing-gamma.vercel.app",
+      "github": "https://github.com/noogler-eng/saas-landing"
+    },
+    {
+      "name": "Artist finder",
+      "des": "this is saas application which shows you the top-10 song of any artists which present on spotify application, it shows both international and national artists",
+      "stack": [
+        "react",
+        "ts",
+        "lucid-react",
+        "framer-motion",
+        "vercel",
+        "spotify-api's",
+        "authentications",
+        "tailwindcss"
+      ],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.54.22%E2%80%AFPM.png?updatedAt=1739709039012"
+      ],
+      "live": "https://artist-finder-bice.vercel.app",
+      "github": "https://github.com/noogler-eng/artist-finder"
+    }
+  ],
+  "backend": [
+    {
+      "name": "paymee",
+      "des": "this is simple upi application where we can send money another user, there is functionality of airdrop, history etc. transactions and atomicity also follows here",
+      "stack": [
+        "react",
+        "ts",
+        "vercel",
+        "render",
+        "express",
+        "mongoDB",
+        "mongoose",
+        "tailwindcss"
+      ],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.56.10%E2%80%AFPM.png?updatedAt=1739709131901"
+      ],
+      "live": "https://frontend-paymee.vercel.app",
+      "github": "https://github.com/noogler-eng/backend-paymee"
+    },
+    {
+      "name": "Music Labs",
+      "des": "Music application here multiple users from different location can listen music at same time sync. this involves the concept of both data structures and oops",
+      "stack": [
+        "react",
+        "next-ui",
+        "tailwindcss",
+        "postgress",
+        "prisma",
+        "render",
+        "vercel",
+        "express",
+        "ts"
+      ],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.56.45%E2%80%AFPM.png?updatedAt=1739709172760"
+      ],
+      "live": "https://music-labs.vercel.app",
+      "github": "https://github.com/noogler-eng/Music-Labs"
+    },
+    {
+      "name": "Decentralised voting protocol",
+      "des": "this is new voting protocol which gives the voting power based on the community token's hold by members, it decides the different voting power to different member to run community",
+      "stack": [
+        "react",
+        "next-ui",
+        "tailwindcss",
+        "hardhat",
+        "solidity",
+        "thirdweb",
+        "vercel",
+        "javascript",
+        "rainbow-wallet"
+      ],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%205.57.30%E2%80%AFPM.png?updatedAt=1739709220046"
+      ],
+      "live": "https://decn-adv-voting.vercel.app",
+      "github": "https://github.com/noogler-eng/decn_adv_voting"
+    }
+  ],
+  "ai-based": [
+    {
+      "name": "ai-powered-webpage",
+      "des": "this is ai-powered chat bot which gives you specific related data of your query based on vectored stored in vectored database",
+      "stack": ["ts", "langchain", "express", "cromadb", "gemini"],
+      "image": [
+        "https://ik.imagekit.io/kh4uegjkx/Screenshot%202025-02-16%20at%206.37.36%E2%80%AFPM.png?updatedAt=1739711283977"
+      ],
+      "live": "https://github.com/noogler-eng/ai-agents",
+      "github": "https://github.com/noogler-eng/ai-agents"
+    }
+  ]
+}
