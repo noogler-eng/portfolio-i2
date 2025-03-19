@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Intro3() {
   return (
-    <div className="flex flex-col gap-2 rounded-2xl shadow-md w-4/12">
+    <div className="flex flex-col gap-2 rounded-2xl shadow-md">
       {[
         {
           label: "Send an email",
