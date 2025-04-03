@@ -22,31 +22,26 @@ export default class RedisCache {
     return this.instance;
   }
 
-  generateKey(type: string, args: string[]): string {
-    return `${type}:${args.join(":")}`;
+  generateKey(type: string): string {
+    return `${type}}`;
   }
 
-  async evict(type: string, args: string[]): Promise<void> {
-    const key = this.generateKey(type, args);
+  async evict(type: string): Promise<void> {
+    const key = this.generateKey(type);
     await this.client.del(key);
   }
 
-  async set(
-    type: string,
-    args: string[],
-    value: string[],
-    expirySeconds: number
-  ): Promise<void> {
-    const key = this.generateKey(type, args);
+  async set(type: string, value: string, expirySeconds: number): Promise<void> {
+    const key = this.generateKey(type);
     if (expirySeconds) {
-      await this.client.set(key, JSON.stringify(value), "EX", expirySeconds);
+      await this.client.set(key, value, "EX", expirySeconds);
     } else {
-      await this.client.set(key, JSON.stringify(value));
+      await this.client.set(key, value);
     }
   }
 
-  async get(type: string, args: string[]): Promise<string[] | null> {
-    const key = this.generateKey(type, args);
+  async get(type: string): Promise<string[] | null> {
+    const key = this.generateKey(type);
     const value = await this.client.get(key);
     return value ? JSON.parse(value) : null;
   }
