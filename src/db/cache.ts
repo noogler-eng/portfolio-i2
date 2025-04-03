@@ -1,6 +1,6 @@
 import { Redis } from "ioredis";
 
-// we can also use in memory cache 
+// we can also use in memory cache
 // in memory cache possible only by usage of the map
 // map - key, value store (not scalable but it can work)
 
@@ -45,7 +45,7 @@ export default class RedisCache {
     }
   }
 
-  async get(type: string, args: string[]): Promise<void> {
+  async get(type: string, args: string[]): Promise<string[] | null> {
     const key = this.generateKey(type, args);
     const value = await this.client.get(key);
     return value ? JSON.parse(value) : null;
