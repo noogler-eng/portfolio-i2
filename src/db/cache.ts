@@ -1,5 +1,9 @@
 import { Redis } from "ioredis";
 
+// we can also use in memory cache 
+// in memory cache possible only by usage of the map
+// map - key, value store (not scalable but it can work)
+
 export default class RedisCache {
   // this client will be only in used when we create an object otherwise
   // it will show red swiggly
@@ -41,7 +45,7 @@ export default class RedisCache {
     }
   }
 
-  async get(type: string, args: string[]): Promise<any> {
+  async get(type: string, args: string[]): Promise<void> {
     const key = this.generateKey(type, args);
     const value = await this.client.get(key);
     return value ? JSON.parse(value) : null;
